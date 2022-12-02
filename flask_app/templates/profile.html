@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div class="  row ">
+            <div class="col-sm-12 d-flex">
+                <h1>Welcome {{loggedUser.first_name}}</h1>
+            <a href="/thoughts">Dashboard</a>
+            <a href="/logout">Log Out</a>
+            </div>
+            
+        </div>
+        <div class="row">
+            <h1>{{user.first_name}} Thoughts</h1>
+        </div>
+        {% for  thought in thoughts%}
+        <p class="w-75 p-3 border-bottom-0" >{{thought.description}}</p>
+        {% endfor%}
+</body>
+</html>
